@@ -53,3 +53,10 @@
 	-o-transform: translate(@x, @y, @z);
 	transform: translate(@x, @y, @z);
 	}
+
+.backface-visibility(@visibility)
+	{
+	-webkit-backface-visibility: @visibility;
+	-moz-backface-visibility: @visibility;
+	backface-visibility: @visibility;
+	}

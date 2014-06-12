@@ -158,6 +158,24 @@
 	border-top-left-radius: @radius;
 	}
 
+// filters
+
+.blur(@blurAmount)
+	{
+	-webkit-filter: blur(@blurAmount);
+	-moz-filter: blur(@blurAmount);
+	-ms-filter: blur(@blurAmount);
+	filter: blur(@blurAmount);
+	}
+
+.brightness(@brightness)
+	{
+	-webkit-filter: brightness(@brightness);
+	-moz-filter: brightness(@brightness);
+	-ms-filter: brightness(@brightness);
+	filter: brightness(@brightness);
+	}
+
 // select 
 
 .user-select(@select) 
