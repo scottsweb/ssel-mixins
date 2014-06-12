@@ -1,0 +1,51 @@
+// typography
+
+.font-size(@fontsize: 16)
+	{
+	@rem: @fontsize / 10;
+	font-size: @fontsize * 1px;
+	font-size: e("@{rem}rem"); 
+	}
+
+.sans-serif 
+	{
+	font-family : "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	}
+
+.serif 
+	{
+	font-family : Cambria, Georgia, "Times New Roman", Times, serif; 
+	}
+
+.monospace 
+	{
+	font-family: Menlo, Monaco, "Courier New", monospace;
+	}
+
+.antialiased
+	{
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	}
+
+.optimizelegibility
+	{
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	-ms-text-rendering: optimizeLegibility;
+	-o-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+	}
+
+.hyphens(@mode: auto) 
+	{
+	word-wrap: break-word;
+	-webkit-hyphens: @mode;
+	-moz-hyphens: @mode;
+	-ms-hyphens: @mode; // IE10+
+	-o-hyphens: @mode;
+	hyphens: @mode;
+	}

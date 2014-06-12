@@ -1,0 +1,179 @@
+// clearfix
+
+.clearfix() 
+	{
+	&:before,
+	&:after 
+		{
+		content: " "; /* 1 */
+		display: table; /* 2 */
+		}
+	&:after 
+	{
+	clear: both;
+	}
+}
+
+// image replacement
+
+.ir 
+	{ 
+	display: block; 
+	text-indent: -999em; 
+	overflow: hidden; 
+	background-repeat: no-repeat; 
+	text-align: left; 
+	direction: ltr; 
+	}
+
+// source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+.hide-text() 
+	{
+	font: ~"0/0" a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+	}
+
+// responsive images
+
+.img-retina(@file-1x; @file-2x; @width-1x; @height-1x) 
+	{
+	background-image: url("@{file-1x}");
+	width: @width-1x;
+	height: @height-1x;
+
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   min--moz-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (        min-device-pixel-ratio: 2),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 2dppx) 
+		{
+		background-image: url("@{file-2x}");
+		background-size: @width-1x @height-1x;
+		}
+	}
+
+.img-responsive(@display: block;) 
+	{
+	display: @display;
+	max-width: 100%; 
+	height: auto;
+	}
+
+// list reset 
+
+.list-reset
+	{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	list-style: none;
+	}
+
+// background clip
+
+.background-clip(@clip) 
+	{
+	-webkit-background-clip: @clip;
+	-moz-background-clip: @clip;
+	background-clip: @clip;
+	}
+
+// background sizing
+
+.background-size(@size)
+	{
+	-webkit-background-size: @size;
+	-moz-background-size: @size;
+	-o-background-size: @size;
+	background-size: @size;
+	}
+
+// opacity
+
+.opacity(@opacity : .5) 
+	{
+	opacity: @opacity;
+	// IE8 filter
+	@opacity-ie: (@opacity * 100);
+	filter: ~"alpha(opacity=@{opacity-ie})";
+	}
+
+// webkit-style focus
+
+.tab-focus() 
+	{
+	// Default
+	outline: thin dotted #333;
+	// Webkit
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+	}
+
+// resize
+
+.resizable(@direction) 
+	{
+	resize: @direction; // Options: horizontal, vertical, both
+	overflow: auto; // Safari fix
+	}
+
+// placeholder
+
+.placeholder(@color: @input-color-placeholder) 
+	{
+	&:-moz-placeholder            { color: @color; } // Firefox 4-18
+	&::-moz-placeholder           { color: @color; } // Firefox 19+
+	&:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+
+	&::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+	}
+
+// border radius
+
+.border-top-radius(@radius) 
+	{
+	border-top-right-radius: @radius;
+	border-top-left-radius: @radius;
+	}
+
+.border-right-radius(@radius) 
+	{
+	border-bottom-right-radius: @radius;
+	border-top-right-radius: @radius;
+	}
+
+.border-bottom-radius(@radius) 
+	{
+	border-bottom-right-radius: @radius;
+	border-bottom-left-radius: @radius;
+	}
+
+.border-left-radius(@radius) 
+	{
+	border-bottom-left-radius: @radius;
+	border-top-left-radius: @radius;
+	}
+
+// select 
+
+.user-select(@select) 
+	{
+	-webkit-user-select: @select;
+	-moz-user-select: @select;
+	-ms-user-select: @select;
+	-o-user-select: @select;
+	user-select: @select;
+	}
+
+// reset IE filters
+
+.reset-filter() 
+	{
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+	}
+
+	
