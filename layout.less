@@ -1,6 +1,6 @@
 // size shortcuts
 
-.size(@width, @height:@width) 
+.size(@width, @height:@width)
 	{
 	width: @width;
 	height: @height;
@@ -8,12 +8,12 @@
 
 // shapes
 
-.square(@size: 5px) 
+.square(@size: 5px)
 	{
 	.size(@size);
 	}
 
-.circle(@size, @bg) 
+.circle(@size, @bg)
 	{
 	.size(@size);
 	border-radius: 50%;
@@ -22,16 +22,16 @@
 
 // box model
 
-.box-sizing(@type: border-box) 
+.box-sizing(@type: border-box)
 	{
 	-webkit-box-sizing: @type;
 	-moz-box-sizing: @type;
 	box-sizing: @type;
 	}
-	
+
 // css columns
 
-.csscolumns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #eee, @columnRuleStyle: solid, @columnRuleWidth: 1px) 
+.csscolumns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #eee, @columnRuleStyle: solid, @columnRuleWidth: 1px)
 	{
 	-webkit-column-width: @colwidth;
 	-webkit-column-count: @colcount;
@@ -50,5 +50,5 @@
 	column-gap: @colgap;
 	column-rule-color: @columnRuleColor;
 	column-rule-style: @columnRuleStyle;
-	column-rule-width: @columnRuleWidth; 
+	column-rule-width: @columnRuleWidth;
 	}

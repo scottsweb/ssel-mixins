@@ -1,20 +1,20 @@
 // css transitions
 
-.transition-duration(@duration : .2s) 
+.transition-duration(@duration : .2s)
 	{
 	-moz-transition-duration: @duration;
 	-webkit-transition-duration: @duration;
-	transition-duration: @duration; 
+	transition-duration: @duration;
 	}
 
-.transition-all(@duration : .2s, @ease:ease-out) 
+.transition-all(@duration : .2s, @ease:ease-out)
 	{
 	-webkit-transition: all @duration @ease;
 	-moz-transition: all @duration @ease;
-	transition: all @duration @ease; 
+	transition: all @duration @ease;
 	}
 
-.transition(@what: all, @time: 0.2s) 
+.transition(@what: all, @time: 0.2s)
 	{
 	-webkit-transition: @what @time ease-out;
 	-moz-transition: @what @time ease-out;

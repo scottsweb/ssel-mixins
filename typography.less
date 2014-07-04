@@ -1,23 +1,23 @@
 // typography
 
-.font-size(@fontsize: 16)
+.font-size(@fontsize: 16) // http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/ ?
 	{
 	@rem: @fontsize / 10;
 	font-size: @fontsize * 1px;
-	font-size: e("@{rem}rem"); 
+	font-size: e("@{rem}rem");
 	}
 
-.sans-serif 
+.sans-serif
 	{
-	font-family : "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-family : "Helvetica Neue", Helvetica, Arial, sans-serif;
 	}
 
-.serif 
+.serif
 	{
-	font-family : Cambria, Georgia, "Times New Roman", Times, serif; 
+	font-family : Cambria, Georgia, "Times New Roman", Times, serif;
 	}
 
-.monospace 
+.monospace
 	{
 	font-family: Menlo, Monaco, "Courier New", monospace;
 	}
@@ -40,7 +40,7 @@
 	text-rendering: optimizeLegibility;
 	}
 
-.hyphens(@mode: auto) 
+.hyphens(@mode: auto)
 	{
 	word-wrap: break-word;
 	-webkit-hyphens: @mode;
@@ -48,4 +48,11 @@
 	-ms-hyphens: @mode; // IE10+
 	-o-hyphens: @mode;
 	hyphens: @mode;
+	}
+
+.text-truncate
+	{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 	}

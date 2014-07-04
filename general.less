@@ -1,14 +1,14 @@
 // clearfix
 
-.clearfix() 
+.clearfix()
 	{
 	&:before,
-	&:after 
+	&:after
 		{
 		content: " "; /* 1 */
 		display: table; /* 2 */
 		}
-	&:after 
+	&:after
 	{
 	clear: both;
 	}
@@ -16,18 +16,18 @@
 
 // image replacement
 
-.ir 
-	{ 
-	display: block; 
-	text-indent: -999em; 
-	overflow: hidden; 
-	background-repeat: no-repeat; 
-	text-align: left; 
-	direction: ltr; 
+.ir
+	{
+	display: block;
+	text-indent: -999em;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	text-align: left;
+	direction: ltr;
 	}
 
 // source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
-.hide-text() 
+.hide-text()
 	{
 	font: ~"0/0" a;
 	color: transparent;
@@ -38,7 +38,7 @@
 
 // responsive images
 
-.img-retina(@file-1x; @file-2x; @width-1x; @height-1x) 
+.img-retina(@file-1x; @file-2x; @width-1x; @height-1x)
 	{
 	background-image: url("@{file-1x}");
 	width: @width-1x;
@@ -50,21 +50,21 @@
 	only screen and (     -o-min-device-pixel-ratio: 2/1),
 	only screen and (        min-device-pixel-ratio: 2),
 	only screen and (                min-resolution: 192dpi),
-	only screen and (                min-resolution: 2dppx) 
+	only screen and (                min-resolution: 2dppx)
 		{
 		background-image: url("@{file-2x}");
 		background-size: @width-1x @height-1x;
 		}
 	}
 
-.img-responsive(@display: block;) 
+.img-responsive(@display: block;)
 	{
 	display: @display;
-	max-width: 100%; 
+	max-width: 100%;
 	height: auto;
 	}
 
-// list reset 
+// list reset
 
 .list-reset
 	{
@@ -76,7 +76,7 @@
 
 // background clip
 
-.background-clip(@clip) 
+.background-clip(@clip)
 	{
 	-webkit-background-clip: @clip;
 	-moz-background-clip: @clip;
@@ -95,7 +95,7 @@
 
 // opacity
 
-.opacity(@opacity : .5) 
+.opacity(@opacity : .5)
 	{
 	opacity: @opacity;
 	// IE8 filter
@@ -105,7 +105,7 @@
 
 // webkit-style focus
 
-.tab-focus() 
+.tab-focus()
 	{
 	// Default
 	outline: thin dotted #333;
@@ -116,7 +116,7 @@
 
 // resize
 
-.resizable(@direction) 
+.resizable(@direction)
 	{
 	resize: @direction; // Options: horizontal, vertical, both
 	overflow: auto; // Safari fix
@@ -124,7 +124,7 @@
 
 // placeholder
 
-.placeholder(@color: @input-color-placeholder) 
+.placeholder(@color: @input-color-placeholder)
 	{
 	&:-moz-placeholder            { color: @color; } // Firefox 4-18
 	&::-moz-placeholder           { color: @color; } // Firefox 19+
@@ -134,25 +134,25 @@
 
 // border radius
 
-.border-top-radius(@radius) 
+.border-top-radius(@radius)
 	{
 	border-top-right-radius: @radius;
 	border-top-left-radius: @radius;
 	}
 
-.border-right-radius(@radius) 
+.border-right-radius(@radius)
 	{
 	border-bottom-right-radius: @radius;
 	border-top-right-radius: @radius;
 	}
 
-.border-bottom-radius(@radius) 
+.border-bottom-radius(@radius)
 	{
 	border-bottom-right-radius: @radius;
 	border-bottom-left-radius: @radius;
 	}
 
-.border-left-radius(@radius) 
+.border-left-radius(@radius)
 	{
 	border-bottom-left-radius: @radius;
 	border-top-left-radius: @radius;
@@ -176,9 +176,9 @@
 	filter: brightness(@brightness);
 	}
 
-// select 
+// select
 
-.user-select(@select) 
+.user-select(@select)
 	{
 	-webkit-user-select: @select;
 	-moz-user-select: @select;
@@ -189,9 +189,8 @@
 
 // reset IE filters
 
-.reset-filter() 
+.reset-filter()
 	{
 	filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
 	}
 
-	
